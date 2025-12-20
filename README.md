@@ -53,7 +53,4 @@ Update configuration files as needed:
 - Message queue integration
 - EJS email templates
 - TypeScript support
-
-## License
-
-MIT
+ 
