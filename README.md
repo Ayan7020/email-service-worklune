@@ -6,7 +6,7 @@ A TypeScript-based email service application with server and message queue integ
 
 ```
 src/
-├── emailService.ts          # Main email service entry point
+├── OtpService.ts          # Main email service entry point
 ├── server.ts                # Express/HTTP server setup
 ├── service/
 │   ├── email.service.ts     # Email sending logic

@@ -1,6 +1,6 @@
 import express from "express";
 import http from "http";
-import { EmailService } from "./emailService";
+import { OtpService } from "./emailService";
 import { ConsumeMessage } from "amqplib";
 import { sendMailViaSmtp } from "./service/email.service";
 
@@ -10,9 +10,9 @@ let server: http.Server;
 
 const startServer = async () => {
     try {
-        await EmailService.connect();
+        await OtpService.connect();
         console.log("Queue Connected");
-        await EmailService.consumeQueues(async (msg: ConsumeMessage) => {
+        await OtpService.consumeQueues(async (msg: ConsumeMessage) => {
             const payload = JSON.parse(msg.content.toString());
             if (!payload?.email) {
                 console.warn("[Consumer] Invalid payload: Missing email.");
