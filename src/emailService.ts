@@ -1,3 +1,3 @@
 import { RabbitMQService } from "./service/mq.service";
 
-export const OtpService = new RabbitMQService("email-queue");
+export const OtpService = new RabbitMQService("otp-queue");
